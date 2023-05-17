@@ -1,0 +1,11 @@
+parameters:
+    level: 3
+    paths:
+        - src
+    excludePaths:
+        - vendor
+        - migrations
+    symfony:
+        container_xml_path: var/cache/dev/App_KernelDevDebugContainer.xml
+    doctrine:
+        objectManagerLoader: tests/object-manager.php

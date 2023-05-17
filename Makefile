@@ -11,4 +11,4 @@ composer_dump:
 	docker run -it --rm -u1000:1000 -v ./$(pwd)/app:/app -w /app composer:2 composer dump-autoload
 
 stan:
-	docker compose exec -it php bash -c "./vendor/bin/phpstan -c phpstan.neon"
+	docker compose exec -it php /bin/sh -c "/app/vendor/bin/phpstan analyse --debug -c /app/phpstan.neon"

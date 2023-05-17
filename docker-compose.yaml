@@ -8,7 +8,7 @@ services:
     volumes:
       - database_data:/var/lib/mysql
     env_file:
-      - .env
+      - .docker.env
     networks:
       - gateway
 
@@ -29,7 +29,10 @@ services:
       - gateway
 
   php:
-    image: php:8.2-fpm-alpine
+#    image: php:8.2-fpm-alpine
+    build:
+      context: .
+      dockerfile: php.Dockerfile
     restart: unless-stopped
     user: 1000:1000
     depends_on:
@@ -45,7 +48,7 @@ services:
     depends_on:
       - database
     env_file:
-      - .env
+      - .docker.env
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.phpmyadmin.rule=Host(`phpmyadmin.localhost`)"
