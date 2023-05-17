@@ -13,4 +13,4 @@ jobs:
         uses: php-actions/phpstan@v3
         with:
           path: app/
-          configuration: phpstan.neon
+          configuration: app/phpstan.neon
