@@ -10,7 +10,4 @@ jobs:
         with:
           working_dir: app/
       - name: PHPStan static analysis
-        uses: php-actions/phpstan@v3
-        with:
-          path: app/
-          configuration: app/phpstan.neon
+        run: "/app/vendor/bin/phpstan analyse --debug -c /app/phpstan.neon"
