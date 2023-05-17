@@ -3,5 +3,5 @@ parameters:
     paths:
         - src
     excludePaths:
-	    - vendor
-	    - migrations
+        - vendor
+        - migrations
