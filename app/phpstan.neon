@@ -1,7 +1,7 @@
 parameters:
     level: 3
     paths:
-        - app/src
+        - src
     excludePaths:
-	    - app/vendor
-	    - app/migrations
+	    - vendor
+	    - migrations
