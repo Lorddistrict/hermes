@@ -10,4 +10,4 @@ jobs:
         with:
           working_dir: app/
       - name: PHPStan static analysis
-        run: "ls -la && ./vendor/bin/phpstan analyse --debug -c phpstan.neon"
+        run: "ls -la && ./app/vendor/bin/phpstan analyse --debug -c ./app/phpstan.neon"
